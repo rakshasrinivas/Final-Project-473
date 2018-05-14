@@ -1,0 +1,23 @@
+<div class="jumbotron text-center">
+
+  <div class="jumbotron text-center">
+    <h3>Login</h3>
+
+    <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-1 col-md-5 col-md-offset-2">
+      {{input type="email" value=userEmail class="form-control" placeholder="Enter your e-mail" autofocus="autofocus"}}
+    </div>
+    <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-4 col-md-3">
+      <button disabled= {{isDisabled}} {{action 'logIn'}} class="btn btn-primary login-button btn-block">Login</button>
+    </div>
+    <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-1 col-md-5 col-md-offset-2">
+      {{input type="password" value=userPassword class="form-control" placeholder="Enter your Password (at least 8)"}}
+    </div>
+    <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-4 col-md-3">
+      {{#link-to 'register' class="btn btn-primary login-button btn-block"}}Register{{/link-to}}
+    </div>
+    <!-- <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-4 col-md-3">
+      <button {{action 'logOut'}} class="btn btn-primary login-button btn-block">Logout</button>
+    </div> -->
+  </div>
+      <p>{{session.currentUser.email}}</p>
+</div>
